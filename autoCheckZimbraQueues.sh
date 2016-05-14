@@ -5,7 +5,7 @@
 # */5 * * * * /root/autoCheckZimbraQueues.sh
 
 #!/bin/bash
-saveGrepInVariable=$(/opt/zimbra/libexec/zmqstat | grep active | grep -P '\d{1}')
+saveGrepInVariable=$(/opt/zimbra/libexec/zmqstat | grep active | grep -P '\d{3}')
 echo "Return Grep Command: ${saveGrepInVariable}"
 
 if [[ -n "${saveGrepInVariable}" ]] ; then
